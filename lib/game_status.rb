@@ -56,17 +56,13 @@ def over?(board)
   end
 end
 
+
 def winner(board)
-  won?.any? do |single_win|
-    if single_win(board) == board["x"]
-      return "x"
-    elsif single_win(board) == board["o"]
-      return "o"
-  else
-    return nil 
-   end
+  if won?(board)
+    return board[won?(board)[0]]
   end
 end
+
 
    
     
