@@ -57,7 +57,7 @@ def over?(board)
 end
 
 def winner(board)
-  won?.any do |single_win|
+  won?.any? do |single_win|
     if single_win(board) == "x"
       return "x"
     elsif single_win(board) == "o"
