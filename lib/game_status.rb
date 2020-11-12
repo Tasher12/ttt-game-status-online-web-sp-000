@@ -58,9 +58,9 @@ end
 
 def winner(board)
   won?.any do |single_win|
-    if single_win == "x"
+    if single_win(board) == "x"
       return "x"
-    elsif single_win == "o"
+    elsif single_win(board) == "o"
       return "o"
   else
     return nil 
